@@ -36,9 +36,12 @@ function canvas_pluma() {
 
         ctx.beginPath();
         ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo externo
-        ctx.moveTo(110, 75);
-        ctx.arc(75, 75, 35, 0, Math.PI, false); // Boca (en el sentido de las agujas del reloj)
+        ctx.moveTo(75+25, 110);                       //
+        ctx.arc(75, 110, 25, 0, Math.PI, true); // Boca (en el sentido de las agujas del reloj)
         ctx.moveTo(65, 65);
+
+
+
         ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Ojo izquierdo
         ctx.moveTo(95, 65);
         ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
@@ -135,6 +138,7 @@ function canvas_heart() {
         ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
         ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
         ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+        ctx.fillStyle = "red"
         ctx.fill();
     }
 }
@@ -156,7 +160,10 @@ function canvas_pacman() {
         ctx.beginPath();
         ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
         ctx.lineTo(31, 37);
+        ctx.fillStyle = "yellow";
         ctx.fill();
+
+        ctx.fillStyle = "black";
 
         for (let i = 0; i < 8; i++) {
             ctx.fillRect(51 + i * 16, 35, 4, 4);
@@ -182,6 +189,7 @@ function canvas_pacman() {
         ctx.lineTo(92.333, 116);
         ctx.lineTo(87.666, 111.333);
         ctx.lineTo(83, 116);
+        ctx.fillStyle = "purple";
         ctx.fill();
 
         ctx.fillStyle = "white";
@@ -239,7 +247,7 @@ function canvas_triangle() {
         ctx.moveTo(75, 20);
         ctx.lineTo(50, 60);
         ctx.lineTo(100, 60);
-
+        ctx.fillStyle = "green";
         ctx.fill();
     }
 }
